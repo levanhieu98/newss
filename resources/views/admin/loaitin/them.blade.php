@@ -24,10 +24,10 @@
 								<div class=" col-lg-9">
 									<input type="text" name="ten" class="form-control input-default  @error('ten') is-invalid @enderror" placeholder="Tên loại tin"  value="{{old('ten')}}">
 									@error('ten')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $message }}</strong>
+									</span>
+									@enderror
 								</div>
 							</div>
 							<div class="form-inline mt-3">
@@ -50,4 +50,5 @@
 					</div>
 				</div>
 			</div>
-		</div>@endsection
+		</div>
+		@endsection

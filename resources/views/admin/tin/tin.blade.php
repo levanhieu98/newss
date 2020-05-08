@@ -18,8 +18,8 @@
                         <tbody>
                          @foreach($tin as $t)
                             <tr>
-                                <td><a href="">{{$t->Id_tin}}</a></td>
-                                <td><a href="">{{$t->Tieude}}</a></td>
+                                <td><a href="admin/tin/suatin/{{$t->Id_tin}}">{{$t->Id_tin}}</a></td>
+                                <td><a href="admin/tin/suatin/{{$t->Id_tin}}">{{$t->Tieude}}</a></td>
                                 <td class="text-center"><span><a href="admin/tin/xoatin/{{$t->Id_tin}}/{{$t->Id_loaitin}}" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger "></i></a></span>
                                 </td>   
                                 

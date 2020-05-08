@@ -44,6 +44,7 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::group(['prefix' => 'tin','middleware'=>'auth'], function() {
 		Route::get('dstin','admin\tinController@dstin');
 		Route::get('xoatin/{idtin}/{idlt}','admin\tinController@xoatin');
+		Route::get('suatin/{id}','admin\tinController@suatin');
 	});
 
 

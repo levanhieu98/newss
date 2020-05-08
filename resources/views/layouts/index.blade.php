@@ -124,6 +124,8 @@
         <script src="admin/plugins/tables/js/jquery.dataTables.min.js"></script>
         <script src="admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
         <script src="admin/plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+        <!-- CKeditor -->
+         <script src="ckeditor/ckeditor.js" type="text/javascript" charset="utf-8" async defer></script>
     </body>
 
     </html>

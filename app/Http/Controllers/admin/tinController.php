@@ -26,4 +26,9 @@ public function xoatin($id,$idloai)
 		return redirect('admin/tin/dstin')->with('error','Xóa thất bại  tin không thể rỗng');
 	}
 }
+
+public function suatin($id)
+{
+	return view('admin.tin.sua');
+}
 }

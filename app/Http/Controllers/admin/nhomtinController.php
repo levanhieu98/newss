@@ -29,7 +29,7 @@ class nhomtinController extends Controller
 		]);
 		 $Ten_nhomtin=$request->ten;
     	 $Trangthai=$request->Anhien;
-    	 var_dump($Ten_nhomtin);
+    	// $check = preg_match('/^[a-zA-Z0-9-\s]+$/',$Ten_nhomtin);
     	$data=array('Ten_nhomtin'=>$Ten_nhomtin,'Trangthai'=>$Trangthai);
     	DB::table('nhomtin')->insert($data);
     	return redirect('admin/nhomtin/themnhomtin')->with('alert','Thêm thành công');
