@@ -45,6 +45,9 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('dstin','admin\tinController@dstin');
 		Route::get('xoatin/{idtin}/{idlt}','admin\tinController@xoatin');
 		Route::get('suatin/{id}','admin\tinController@suatin');
+		Route::put('dulieusua/{id}','admin\tinController@dulieusua');
+		Route::get('themtin','admin\tinController@themtin');
+		Route::post('dulieuthem','admin\tinController@dulieuthem');
 	});
 
 

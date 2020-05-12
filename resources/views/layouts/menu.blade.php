@@ -25,7 +25,7 @@
         </a>
         <ul aria-expanded="false">
             <li><a href="admin/tin/dstin" aria-expanded="false">Danh sách</a></li>
-            <li><a href="">Thêm  tin</a></li>
+            <li><a href="admin/tin/themtin">Thêm  tin</a></li>
         </ul>
     </li>
     <li>
