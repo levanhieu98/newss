@@ -4,7 +4,7 @@
 	<div class="col-lg-11 ml-5 mr-3 ">
 		<div class="card">
 			<div class="card-body ">
-				{{-- @include('note.alert') --}}
+				@include('note.alert')
 				<h4 class="card-title">Sữa tin</h4>
 				<div class="basic-form ml-5">
 					@foreach($tin as $t)

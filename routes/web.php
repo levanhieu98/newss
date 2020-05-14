@@ -21,6 +21,8 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function() {
 	Route::get('home', 'HomeController@index')->name('home');
 	Route::get('logout','Auth\LoginController@logout');
+	Route::get('reset','Auth\ResetPasswordController@reset');
+	Route::put('rspass/{id}', 'Auth\ResetPasswordController@rspass');
 //Nhom tin
 	Route::group(['prefix' => 'nhomtin','middleware'=>'auth'], function() {
 		Route::get('dsnhomtin','admin\nhomtinController@dsnhomtin');
@@ -48,6 +50,11 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::put('dulieusua/{id}','admin\tinController@dulieusua');
 		Route::get('themtin','admin\tinController@themtin');
 		Route::post('dulieuthem','admin\tinController@dulieuthem');
+	});
+//User
+	Route::group(['prefix' => 'user','middleware'=>'rule'], function() {
+	    Route::get('dsquantri','admin\quantri@dsquantri');
+	    Route::get('users/{id}','admin\quantri@xoa');
 	});
 
 

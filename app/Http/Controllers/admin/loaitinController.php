@@ -4,11 +4,13 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+// use App\loaitin;
 
 class loaitinController extends Controller
 {
     public function dsloaitin()
-    {  $loaitin=DB::table('loaitin')->get();
+      {  $loaitin=DB::table('loaitin')->get();
+        // $loaitin=loaitin::all();
     	return view('admin.loaitin.loaitin',compact('loaitin'));
     }
 

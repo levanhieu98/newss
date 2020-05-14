@@ -41,7 +41,7 @@
             <i class="icon-user menu-icon"></i><span class="nav-text">Quản trị</span>
         </a>
         <ul aria-expanded="false">
-            <li><a href="">Danh sách</a></li>
+            <li><a href="admin/user/dsquantri">Danh sách</a></li>
         </ul>
     </li>
 </ul>

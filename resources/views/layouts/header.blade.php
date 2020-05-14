@@ -2,7 +2,7 @@
     <div class="header-right ">
         <ul class="clearfix">
             <li class="icons  d-none d-md-flex">
-                <div class="name">H</div>
+                <div class="name">{{Auth::user()->name}}</div>
             </li>
 
             <li class="icons dropdown">
@@ -16,7 +16,7 @@
                     <div class="dropdown-content-body">
                         <ul>
                             <li>
-                                <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                <a href="admin/reset"><i class="icon-user"></i> <span>Reset</span></a>
                             </li>
                             <li><a href="admin/logout"><i class="icon-key"></i> <span>Logout</span></a></li>
                         </ul>
