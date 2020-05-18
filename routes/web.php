@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-	return view('welcome');
-});
+Route::get('/','HomeController@index')->name('home');
 
+
+///////////////////////////////////////////////////////////
 Auth::routes();
 Route::group(['prefix' => 'admin'], function() {
-	Route::get('home', 'HomeController@index')->name('home');
+	Route::get('home', 'admin\homeController@index');
 	Route::get('logout','Auth\LoginController@logout');
 	Route::get('reset','Auth\ResetPasswordController@reset');
 	Route::put('rspass/{id}', 'Auth\ResetPasswordController@rspass');

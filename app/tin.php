@@ -15,6 +15,6 @@ class tin extends Model
 
     public function binhluan()
     {
-    	$this->hasMany(binhluan::class,'Id_tin', 'Id_tin')
+    	$this->hasMany(binhluan::class,'Id_tin', 'Id_tin');
     }
 }
