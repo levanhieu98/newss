@@ -9,7 +9,7 @@
 				<div class="fh5co_suceefh5co_height_position_absolute_font">
 					<div class=""><a href="#" class="color_fff"> <i class="fa fa-clock-o"></i>{{$tinhot[0]->Ngaydangtin}}
 					</a></div>
-					<div class=""><a style="font-size:13px" href="single.html" class="fh5co_good_font"> {{$tinhot[0]->Tieude}} </a></div>
+					<div class=""><a style="font-size:13px" href="chitiet/{{$tinhot[0]->Id_tin}}" class="fh5co_good_font"> {{$tinhot[0]->Tieude}} </a></div>
 				</div>
 			</div>
 		</div>
@@ -23,7 +23,7 @@
 						<div class="fh5co_suceefh5co_height_position_absolute_font_2">
 							<div class=""><a href="#" class="color_fff"> <i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{$tm->Ngaydangtin}}
 							</a></div>
-							<div ><a style="font-size:13px" href="single.html" class="fh5co_good_font_2  "> {{$tm->Tieude}} </a></div>
+							<div ><a style="font-size:13px" href="chitiet/{{$tm->Id_tin}}" class="fh5co_good_font_2  "> {{$tm->Tieude}} </a></div>
 						</div>
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 					<div class="fh5co_hover_news_img">
 						<div class="fh5co_news_img"><img src="{{asset('admin/images/'.$t->Hinhdaidien)}}" alt=""/></div>
 						<div>
-							<a href="single.html" class="d-block fh5co_small_post_heading"><span class="">{{$t->Tieude}}</span></a>
+							<a href="chitiet/{{$t->Id_tin}}" class="d-block fh5co_small_post_heading"><span class="">{{$t->Tieude}}</span></a>
 							<div class="c_g"><i class="fa fa-clock-o"></i> {{$t->Ngaydangtin}}</div>
 						</div>
 					</div>
@@ -192,7 +192,7 @@
 													</div>
 												</div>
 												<div class="col-md-7 animate-box">
-													<a href="single.html" class="fh5co_magna py-2"> {{$tt->Tieude}} </a> <a href="single.html" class="fh5co_mini_time py-3">{{$tt->Tacgia}} -
+													<a href="chitiet/{{$tt->Id_tin}}" class="fh5co_magna py-2"> {{$tt->Tieude}} </a> <a href="single.html" class="fh5co_mini_time py-3">{{$tt->Tacgia}} -
 													{{$tt->Ngaydangtin}} </a>
 													<div class="fh5co_consectetur"> {{$tt->Mota}}
 													</div>

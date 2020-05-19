@@ -16,7 +16,7 @@
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
 							@foreach($theloai as $tl)
 							@if($tl->Id_nhomtin==$nt->Id_nhomtin)
-							<a class="dropdown-item" href="#">{{$tl->Ten_loaitin}}</a>
+							<a class="dropdown-item" href="theloai/{{$tl->Id_loaitin}}">{{$tl->Ten_loaitin}}</a>
 							@endif
 							@endforeach
 							

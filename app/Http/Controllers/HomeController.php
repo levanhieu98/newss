@@ -21,5 +21,21 @@ class HomeController extends Controller
         return view('home',compact(['nhomtin','tinhot','xuthe','tinmoi','tin','theloai']));
     }
 
+    public function chitiet($id)
+    { 
+        $nhomtin=nhomtin::where('Trangthai',1)->get();
+        $theloai=loaitin::all();
+        $chitiet=tin::where('Id_tin',$id)->get();
+        $tinmoi=tin::where('Trangthai',1)->get()->random(6);
 
+    return view ('tinchitiet',compact(['nhomtin','theloai','chitiet','tinmoi']));  
+    }
+
+    public function theloai($id)
+    {    $nhomtin=nhomtin::where('Trangthai',1)->get();
+        $theloai=loaitin::all();
+        $tin=tin::where('Id_loaitin',$id)->get();
+        $xuthe=tin::where('Trangthai',1)->get()->random(8);
+        return view('theloai',compact(['nhomtin','theloai','tin','xuthe']));
+    }
 }
