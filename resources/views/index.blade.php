@@ -40,11 +40,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-3 fh5co_padding_menu">
-					<img src="hinhmau/logo.png" alt="img" class="fh5co_logo_width"/>
+					<img src="images/logo.png" alt="img" class="fh5co_logo_width"/>
 				</div>
-				<div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+				<div class="col-12 col-md-9 align-self-center fh5co_mediya_right d-flex  justify-content-end">
+					<div class=" text-center d-inline-block form-inline">
+						<form action="/timkiem" method="post" accept-charset="utf-8">
+							@csrf
+						<input type="text" name="search" class="form-control" placeholder="Tìm kiếm">
+					<button type="submit" class="btn btn-default">Tìm </button>
+					</form>
+						</div>
+							
 					<div class="text-center d-inline-block">
-						<a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div></a>
+						<a href="/timkiemApi" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div></a>
 					</div>
 					<div class="text-center d-inline-block">
 						<a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div></a>
@@ -67,9 +75,9 @@
 	<div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
 		@include('menu')
 	</div>
-	@yield('content');
+	@yield('content')
 	<div class="container-fluid fh5co_footer_bg pb-3">
-		@include('footer');
+		@include('footer')
 	</div>
 	<div class="container-fluid fh5co_footer_right_reserved">
 		<div class="container">
@@ -91,7 +99,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/owl.carousel.min.js"></script>
-		<!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+		{{-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> --}}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
 		integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
 		crossorigin="anonymous"></script>

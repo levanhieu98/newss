@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::apiResource('nhomtin', 'api\nhomtin')->only(['index']);
+Route::apiResource('tin', 'api\tin')->only(['index','show']);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

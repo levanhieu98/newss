@@ -1,6 +1,6 @@
 <div class="container animate-box">
 											<div class="row">
-												<div class="col-12 spdp_right py-5"><img src="hinhmau/white_logo.png" alt="img" class="footer_logo"/></div>
+												<div class="col-12 spdp_right py-5"><img src="images/white_logo.png" alt="img" class="footer_logo"/></div>
 												<div class="clearfix"></div>
 												<div class="col-12 col-md-4 col-lg-3">
 													<div class="footer_main_title py-3"> About</div>
@@ -44,7 +44,7 @@
 													<a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
 													<div class="footer_makes_sub_font"> Dec 31, 2016</div>
 													<a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
-													<div class="footer_position_absolute"><img src="hinhmau/footer_sub_tipik.png" alt="img" class="width_footer_sub_img"/></div>
+													<div class="footer_position_absolute"><img src="images/footer_sub_tipik.png" alt="img" class="width_footer_sub_img"/></div>
 												</div>
 												<div class="col-12 col-md-12 col-lg-4 ">
 													<div class="footer_main_title py-3"> Last Modified Posts</div>

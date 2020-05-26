@@ -33,7 +33,7 @@
             <i class="icon-notebook menu-icon"></i><span class="nav-text">Bình luận</span>
         </a>
         <ul aria-expanded="false">
-            <li><a href="">Danh sách</a></li>
+            <li><a href="#">Danh sách</a></li>
         </ul>
     </li>
     <li>

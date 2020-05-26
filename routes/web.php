@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','HomeController@index')->name('home');
 Route::get('chitiet/{id}','HomeController@chitiet');
 Route::get('theloai/{id}','HomeController@theloai');
+Route::get('timkiemApi', 'HomeController@hienthi');
+Route::post('timkiem', 'HomeController@timkiem');
 
 
 ///////////////////////////////////////////////////////////
@@ -52,6 +54,7 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::put('dulieusua/{id}','admin\tinController@dulieusua');
 		Route::get('themtin','admin\tinController@themtin');
 		Route::post('dulieuthem','admin\tinController@dulieuthem');
+
 	});
 //User
 	Route::group(['prefix' => 'user','middleware'=>'rule'], function() {

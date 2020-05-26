@@ -38,4 +38,20 @@ class HomeController extends Controller
         $xuthe=tin::where('Trangthai',1)->get()->random(8);
         return view('theloai',compact(['nhomtin','theloai','tin','xuthe']));
     }
+
+    public function hienthi()
+    { $nhomtin=nhomtin::where('Trangthai',1)->get();
+        $theloai=loaitin::all();
+        return view('timkiemApi',compact(['nhomtin','theloai']));
+    }
+
+    public function timkiem(Request $request)
+    {
+        $nhomtin=nhomtin::where('Trangthai',1)->get();
+        $theloai=loaitin::all();
+        $tukhoa = $request ->search;
+    $tin = tin::where('Tieude','like','%'.$tukhoa.'%') -> get();
+  
+ return view('timkiem',['tin'=>$tin,'tukhoa'=>$tukhoa,'nhomtin'=>$nhomtin,'theloai'=>$theloai]);
+    }
 }
