@@ -37,7 +37,7 @@
 <div class="container-fluid pt-3">
 	<div class="container animate-box" data-animate-effect="fadeIn">
 		<div>
-			<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Trending</div>
+			<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Tin hot</div>
 		</div>
 		<div class="owl-carousel owl-theme js" id="slider1">
 			@foreach($xuthe as $xt)
@@ -47,7 +47,7 @@
 						class="fh5co_img_special_relative"/></div>
 						<div class="fh5co_latest_trading_img_position_absolute"></div>
 						<div class="fh5co_latest_trading_img_position_absolute_1">
-							<a href="single.html" class="text-white"> {{$xt->Tieude}} </a>
+							<a href="chitiet/{{$xt->Id_tin}}"> {{$xt->Tieude}} </a>
 							<div class="fh5co_latest_trading_date_and_name_color"> {{$xt->Tacgia}} - {{$xt->Ngaydangtin}}</div>
 						</div>
 					</div>
@@ -60,7 +60,7 @@
 	<div class="container-fluid pb-4 pt-5">
 		<div class="container animate-box">
 			<div>
-				<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">News</div>
+				<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Tin mới</div>
 			</div>
 			<div class="owl-carousel owl-theme" id="slider2">
 				@foreach($tinmoi as $t)
@@ -79,8 +79,9 @@
 	</div>
 	<div class="container-fluid fh5co_video_news_bg pb-4">
 		<div class="container animate-box" data-animate-effect="fadeIn">
+
 			<div>
-				<div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-white">Video News</div>
+				<div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4  text-black">Các video mới</div>
 			</div>
 			<div>
 				<div class="owl-carousel owl-theme" id="slider3">
@@ -176,12 +177,12 @@
 									</div>
 								</div>
 							</div>
-							<div class="container-fluid pb-4 pt-4 paddding  ">
+							<div class="container-fluid pb-4 pt-4 paddding">
 								<div class="container paddding">
 									<div class="row mx-0">
-										<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+										<div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
 											<div>
-												<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">News</div>
+												<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Các tin khác</div>
 											</div>
 											@foreach($tin as $tt)
 											<div class="row pb-4">
@@ -199,6 +200,35 @@
 												</div>
 											</div>
 											@endforeach
+										</div>
+										<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+											<div>
+												<div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Thể Loại
+												</div>
+											</div>
+											@foreach($theloai as $tl)
+											<div class="clearfix"></div>
+											
+											<div class="fh5co_tags_all">
+											<a href="theloai/{{$tl->Id_loaitin}}" class="fh5co_tagg">{{$tl->Ten_loaitin}}</a>
+											
+											</div>
+											@endforeach
+											<div>
+												<div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4">Tin hot </div>
+											</div>
+											@foreach($xuthe as $xt)
+											<div class="row pb-3">
+												<div class="col-5 align-self-center">
+													<img style="width:100px" src="{{asset('admin/images/'.$xt->Hinhdaidien)}}" alt=""class="fh5co_most_trading"/>
+												</div>
+												<div class="col-7 paddding">
+													<div class="most_fh5co_treding_font"><a href="chitiet/{{$t->Id_tin}}">{{$xt->Tieude}}</a></div>
+													
+													<div class="most_fh5co_treding_font_123">  {{$xt->Ngaydangtin}}</div>
+												</div>
+											</div>
+										@endforeach
 										</div>
 										
 										

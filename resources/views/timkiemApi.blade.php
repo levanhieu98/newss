@@ -18,7 +18,7 @@
 			var kq="";
 			if(data.length==0)
 			{
-				$('#show').append('Không tìm thấy');
+				document.getElementById('show').innerHTML='Khong tim thay'
 				return;
 			}
 			$.each(data, function(k,v) {
@@ -26,7 +26,8 @@
 				
 
 			});
-			$('#show').append(kq);
+			document.getElementById('show').innerHTML=kq;
+
 		})
 	})</script>
 
