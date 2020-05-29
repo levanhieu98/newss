@@ -110,6 +110,8 @@
 		<script src="js/jquery.waypoints.min.js"></script>
 		<!-- Main -->
 		<script src="js/main.js"></script>
-
+{{-- <script>$.get('api/nhomtin',function(data){
+	console.log(data);
+})</script> --}}
 	</body>
 	</html>

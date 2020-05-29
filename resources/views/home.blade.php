@@ -1,10 +1,22 @@
 @extends('index')
 @section('content')
-<div class="container-fluid paddding mb-5">
+<style type="text/css" media="screen">
+	a {
+  color:#424040;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #014c8c;
+  text-decoration: underline;
+}
+	
+</style>
+<div class="container  mb-5">
 	
 	<div class="row mx-0">
-		<div class="col-md-6 col-12 paddding animate-box" data-animate-effect="fadeIn">
-			<div class="fh5co_suceefh5co_height"><img src="{{asset('admin/images/'.$tinhot[0]->Hinhdaidien)}}" alt="img"/>
+		<div class="col-md-6  col-12 paddding animate-box" data-animate-effect="fadeIn">
+			<div class="fh5co_suceefh5co_height "><img src="{{asset('admin/images/'.$tinhot[0]->Hinhdaidien)}}" alt="img"/>
 				<div class="fh5co_suceefh5co_height_position_absolute"></div>
 				<div class="fh5co_suceefh5co_height_position_absolute_font">
 					<div class=""><a href="#" class="color_fff"> <i class="fa fa-clock-o"></i>{{$tinhot[0]->Ngaydangtin}}

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::apiResource('nhomtin', 'api\nhomtin')->only(['index']);
+Route::apiResource('nhomtin', 'api\nhomtinApi')->only(['index','store','show','destroy','update']);
 Route::apiResource('tin', 'api\tin')->only(['index','show']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

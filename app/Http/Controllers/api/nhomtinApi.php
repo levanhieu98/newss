@@ -5,9 +5,9 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\nhomtin;
 
-
-class nhomtin extends Controller
+class nhomtinApi extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class nhomtin extends Controller
      */
     public function index( )
     {
-        $nhomtin=DB::table('nhomtin')->get();
+        $nhomtin=nhomtin::all();
         return response()->json($nhomtin);
     }
 
@@ -28,7 +28,9 @@ class nhomtin extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nt=nhomtin::create($request->all());
+        return response()
+        ->json([$nt,'message'=>'Thêm thành công']); 
     }
 
     /**
@@ -39,8 +41,18 @@ class nhomtin extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        $nhomtin=nhomtin::where('Id_nhomtin',$id)->get();
+        if($nhomtin->count()>0)
+        {
+           return response()->json([$nhomtin,'message'=>'Tim thay']);
+           
+       }
+       else
+       {
+           return response()->json(['message'=>'Không tìm thấy']);
+       }
+       
+   }
 
     /**
      * Update the specified resource in storage.
@@ -51,7 +63,9 @@ class nhomtin extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $nhomtin=nhomtin::where('Id_nhomtin',$id);
+        $nhomtin->update($request->all());
+        return response()->json(['message'=>'cập nhập thành công']);
     }
 
     /**
@@ -62,6 +76,8 @@ class nhomtin extends Controller
      */
     public function destroy($id)
     {
-        //
+        $nhomtin=nhomtin::where('Id_nhomtin',$id);
+        $nhomtin->delete();
+        return response()->json(['message'=>'xóa thành công']);
     }
 }

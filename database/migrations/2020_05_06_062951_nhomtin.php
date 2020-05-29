@@ -15,7 +15,7 @@ class Nhomtin extends Migration
     {
         Schema::create('nhomtin', function (Blueprint $table) {
             $table->increments('Id_nhomtin');
-            $table->string('Ten_nhomtin', 50)->unique();
+            $table->string('Ten_nhomtin',50)->unique();
             $table->boolean('Trangthai');
         });
     }

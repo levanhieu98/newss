@@ -1,6 +1,6 @@
 @extends('index')
 @section('content')
-<body class="single">
+<body class="single container ">
     @foreach($chitiet as $ct)
     <div id="fh5co-title-box" style=" background-image: url({{asset('admin/images/'.$ct->Hinhdaidien)}});background-position:50% 50%" >
         <div class="page-title">

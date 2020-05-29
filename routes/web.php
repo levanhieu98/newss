@@ -18,7 +18,9 @@ Route::get('chitiet/{id}','HomeController@chitiet');
 Route::get('theloai/{id}','HomeController@theloai');
 Route::get('timkiemApi', 'HomeController@hienthi');
 Route::post('timkiem', 'HomeController@timkiem');
-
+Route::get('demo', function() {
+    return view('demoApi');
+});
 
 ///////////////////////////////////////////////////////////
 Auth::routes();
@@ -61,6 +63,7 @@ Route::group(['prefix' => 'admin'], function() {
 	    Route::get('dsquantri','admin\quantri@dsquantri');
 	    Route::get('users/{id}','admin\quantri@xoa');
 	});
-
+   
+   
 
 });
