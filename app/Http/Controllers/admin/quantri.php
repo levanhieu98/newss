@@ -11,7 +11,7 @@ class quantri extends Controller
 {
     public function dsquantri()
     {
-    	$qt=User::all()->where('Trangthai',1);
+    	$qt=User::all();
     	return view ('admin.quantri.quantri',compact('qt'));
     }
     public function xoa($id)
