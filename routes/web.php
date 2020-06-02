@@ -23,8 +23,8 @@ Route::get('demo', function() {
 });
 
 ///////////////////////////////////////////////////////////
-Auth::routes();
-Route::group(['prefix' => 'admin'], function() {
+Auth::routes(['verify' => true]);
+Route::group(['prefix' => 'admin','middleware'=>'verified'], function() {
 	Route::get('home', 'admin\homeController@index');
 	Route::get('logout','Auth\LoginController@logout');
 	Route::get('reset','Auth\ResetPasswordController@reset');

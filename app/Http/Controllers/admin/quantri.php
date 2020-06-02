@@ -19,7 +19,7 @@ class quantri extends Controller
     	
     	if($id!=Auth::id())
     	{
-    		DB::table('users')->where('id',$id)->update(['Trangthai'=>0]);
+    		DB::table('users')->where('id',$id)->delete();
     		 return redirect('admin/user/dsquantri')->with('alert','Xóa thành công');
     	}
     	else {
